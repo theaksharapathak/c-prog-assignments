@@ -1,3 +1,4 @@
+///////readArrayElements
 #include <stdio.h>
 
 //function to read array elements
