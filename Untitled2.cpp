@@ -1,29 +1,30 @@
-#include<stdio.h>
-#include<conio.h>
- 
-main()
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+struct Point {
+    int x, y;
+};
+
+
+double getDistance(struct Point a, struct Point b)
 {
-    int i, n;
-    float x, sum, t;
-    
-     
-    printf(" Enter the value for x : ");
-    scanf("%f",&x);
-     
-    printf(" Enter the value for n : ");
-    scanf("%d",&n);
-     
-    x=x*3.14159/180;
-    t=x;
-    sum=x;
-     
-    /* Loop to calculate the value of Sine */
-    for(i=1;i<=n;i++)
-    {
-        t=(t*(-1)*x*x)/(2*i*(2*i+1));
-        sum=sum+t;
-    }
-     
-    printf(" The value of Sin(%f) = %.4f",x,sum);
-    getch();
+    double distance;
+    distance = sqrt((a.x - b.x) * (a.x - b.x) + (a.y-b.y) *(a.y-b.y));
+    return distance;
+}
+
+
+
+int main()
+{
+    struct Point a, b;
+    printf("Enter coordinate of point a: ");
+    scanf("%d %d", &a.x, &a.y);
+    printf("Enter coordinate of point b: ");
+    scanf("%d %d", &b.x, &b.y);
+    printf("Distance between a and b: %lf\n", getDistance(a, b));
+
+
+    return 0;
 }

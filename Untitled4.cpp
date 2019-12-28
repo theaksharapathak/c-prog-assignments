@@ -1,5 +1,6 @@
 #include<stdio.h>
-main()
+
+int matrix(int a[][], b[][])
 {
-	
+	int i,j,
 }
